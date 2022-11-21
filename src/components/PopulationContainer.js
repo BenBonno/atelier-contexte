@@ -1,10 +1,10 @@
-// I'm a useless component whose sole purpose is to illustrate 
+// I'm a useless component whose sole purpose is to illustrate
 // why context is awesome, don't mind me!
 
-import Population from "./Population"
+import Population from "./Population";
 
-const PopulationContainer = ({data, isLoading, year}) => {
-    return <Population data={data} isLoading={isLoading} year={year} />
-}
+const PopulationContainer = () => {
+  return <Population />;
+};
 
-export default PopulationContainer
+export default PopulationContainer;

@@ -1,8 +1,12 @@
 // Somewhere here you may have to use useContext()...
 
-const Population =({data, isLoading, year}) => {
-    console.log(2020 - (parseInt(year)));
-    return !isLoading && <p>{data[2020 - (parseInt(year))].Population}</p>
-}
+import { useContext } from "react";
+import DataContext from "../contexts/DataContext";
 
-export default Population
+const Population = () => {
+  const { data, isLoading, year } = useContext(DataContext);
+  console.log(2020 - parseInt(year));
+  return !isLoading && <p>{data[2020 - parseInt(year)].Population}</p>;
+};
+
+export default Population;
